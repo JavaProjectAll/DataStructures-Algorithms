@@ -1,8 +1,11 @@
-package Practice1_LinkedList_Classic;
+package Practice.LinkedList.Classic;
 
 public class MyLinkedList {
     private Note head;
     private int numNodes ;
+
+    public MyLinkedList() {
+    }
 
     public MyLinkedList(Object data) {
         this.head = new Note(data);
