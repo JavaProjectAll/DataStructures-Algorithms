@@ -9,6 +9,10 @@ public class MyList<E> {
         elements = new Object[DEFAUL_CAPACITY];
     }
 
+    public MyList(int capacity) {
+        elements = new Object[capacity];
+    }
+
     public void ensureCapacity() {
         int newSize = elements.length * 2;
         elements = Arrays.copyOf(elements, newSize);
@@ -73,8 +77,8 @@ public class MyList<E> {
     }
 
     public E remove(int index) {
-        if (index > size || index <0){
-            throw new IndexOutOfBoundsException("Not found index: "+index+" while size: "+size);
+        if (index > size || index < 0) {
+            throw new IndexOutOfBoundsException("Not found index: " + index + " while size: " + size);
         }
         Object oldElement = elements[index];
         int j = 0;
