@@ -26,11 +26,21 @@ public class MyList<E> {
         if (index > size) size = index + 1;
     }
 
-    public void add(E data) {
-        if (size == elements.length) {
-            ensureCapacity();
+    //    public void add(E data) {
+//        if (size == elements.length) {
+//            ensureCapacity();
+//        }
+//        elements[size++] = data;
+//    }
+    public boolean add(E data) {
+        if (size == elements.length) ensureCapacity();
+        for (int i = 0; i < size; i++) {
+            if (elements[i] == null){
+                elements[i] = data;
+                return true;
+            }
         }
-        elements[size++] = data;
+        return false;
     }
 
     public int size() {
@@ -90,5 +100,10 @@ public class MyList<E> {
         }
         size--;
         return (E) oldElement;
+    }
+
+    public E clone(){
+
+        return (E) "";
     }
 }
