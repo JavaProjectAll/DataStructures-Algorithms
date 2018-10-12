@@ -18,7 +18,7 @@ public class Mylist<E> {
 
     public E get(int index) {
         if (index >= size || index < 0) {
-            throw new IndexOutOfBoundsException("Index: " + index + ", Size " + index);
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size " + size);
         }
         return (E) elements[index];
     }
