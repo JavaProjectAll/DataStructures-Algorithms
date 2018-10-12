@@ -26,17 +26,12 @@ public class MyList<E> {
         if (index > size) size = index + 1;
     }
 
-    //    public void add(E data) {
-//        if (size == elements.length) {
-//            ensureCapacity();
-//        }
-//        elements[size++] = data;
-//    }
     public boolean add(E data) {
         if (size == elements.length) ensureCapacity();
-        for (int i = 0; i < size; i++) {
-            if (elements[i] == null){
+        for (int i = 0; i < elements.length; i++) {
+            if (elements[i] == null) {
                 elements[i] = data;
+                if (i >= size) size++;
                 return true;
             }
         }
@@ -103,7 +98,12 @@ public class MyList<E> {
     }
 
     public E clone(){
-
-        return (E) "";
+        try {
+            MyList<?> v = (MyList<?>) super.clone();
+            v.elements = Arrays.copyOf(elements, size);
+            return (E) v;
+        }catch (CloneNotSupportedException e){
+            throw new InternalError(e);
+        }
     }
 }
