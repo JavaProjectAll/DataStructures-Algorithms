@@ -1,7 +1,5 @@
 package Exercise.LinkedList.LibraryAdvanced;
 
-import java.util.LinkedList;
-
 public class MyLinkedList<E> {
     private Node<E> head;
     private Node<E> tail = null;

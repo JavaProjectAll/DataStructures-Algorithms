@@ -15,5 +15,9 @@ public class TestMyList {
         //arrNum.clear();
         //arrNum.remove(0);
         //arrNum.getAll();
+
+        MyList<Object> arrNumNew = new MyList<Object>();
+          arrNum.clone();
+
     }
 }
