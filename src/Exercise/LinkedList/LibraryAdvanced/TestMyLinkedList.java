@@ -7,7 +7,8 @@ public class TestMyLinkedList {
         data.addFirs(5);
         data.addLast(19);
         data.addFirs(6);
-        //System.out.println("Đã xóa "+data.remove(0));
+        System.out.println(data.get(0));
+        System.out.println("Đã xóa "+data.remove(0));
 //        data.printList();
 //        System.out.println("Hiển thị "+data.getFirst());
 //        System.out.println("Vị trí của phần tử là "+data.indexOf(12));

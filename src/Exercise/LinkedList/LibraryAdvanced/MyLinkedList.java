@@ -51,7 +51,7 @@ public class MyLinkedList<E> {
     }
 
     public E remove(int index) {
-        if (numNode < 0 && index > numNode) {
+        if (numNode < 0 || index > numNode) {
             return null;
         } else {
             Node<E> previous = head;
